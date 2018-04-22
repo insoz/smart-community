@@ -1,0 +1,145 @@
+@import "../styles/index.less";
+
+.normal {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle, @border-color, #090b1b 60%);
+  min-height: 100%;
+}
+
+.header {
+  position: relative;
+  background: url("../assets/images/logo.png") no-repeat center 15px;
+  margin-bottom: 37px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+.main {
+  padding: 0 15px;
+  flex: 1 0 auto;
+}
+
+.menu {
+  margin-left: 178px;
+  font-size: 18px;
+  line-height: 77px;
+}
+
+.line-left {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  .one {
+    position: absolute;
+    background: #4a6ed5;
+    height: 1px;
+    width: 67px;
+    right: 276px;
+    transform: rotate(-45deg);
+  }
+
+  .two {
+    position: absolute;
+    background: #4a6ed5;
+    height: 1px;
+    top: -6px;
+    width: 50px;
+    right: 287px;
+    transform: rotate(-45deg);
+  }
+}
+
+.line-right {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  .one {
+    position: absolute;
+    background: #4a6ed5;
+    height: 1px;
+    width: 67px;
+    left: 276px;
+    transform: rotate(45deg);
+  }
+
+  .two {
+    position: absolute;
+    background: #4a6ed5;
+    height: 1px;
+    top: -6px;
+    width: 50px;
+    left: 287px;
+    transform: rotate(45deg);
+  }
+}
+
+.bg-line-left {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  pointer-events: none;
+
+  .left-line {
+    position: absolute;
+    right: 0;
+    width: 322px;
+    background: linear-gradient(to right, #3f5fa9, rgba(63, 95, 165, 0));
+    bottom: -17px;
+    height: 1px;
+  }
+  .center-line {
+    position: absolute;
+    right: 319px;
+    width: 30px;
+    background: #3f5fa9;
+    transform: rotate(32deg);
+    bottom: -9px;
+    height: 1px;
+  }
+  .right-line {
+    position: absolute;
+    right: 346px;
+    width: 500px;
+    background: linear-gradient(to left, #3f5fa9, rgba(63, 95, 165, 0));
+    bottom: -1px;
+    height: 1px;
+  }
+}
+.bg-line-right {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  pointer-events: none;
+
+  .left-line {
+    position: absolute;
+    left: 0;
+    width: 322px;
+    background: linear-gradient(to left, #3f5fa9, rgba(63, 95, 165, 0));
+    bottom: -17px;
+    height: 1px;
+  }
+  .center-line {
+    position: absolute;
+    left: 319px;
+    width: 30px;
+    background: #3f5fa9;
+    transform: rotate(-32deg);
+    bottom: -9px;
+    height: 1px;
+  }
+  .right-line {
+    position: absolute;
+    left: 346px;
+    width: 500px;
+    background: linear-gradient(to right, #3f5fa9, rgba(63, 95, 165, 0));
+    bottom: -1px;
+    height: 1px;
+  }
+}

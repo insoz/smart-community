@@ -1,0 +1,32 @@
+@import "../../styles/index.less";
+
+.menu {
+  &.menu-dark {
+    // background: @base-bg;
+    color: @menu-dark-color;
+    a {
+      color: @menu-dark-color;
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    .menu-item-active {
+      a {
+        text-shadow: 0px 0px 50px @item-active-color;
+        color: @item-active-color;
+      }
+    }
+  }
+  &.menu-horizontal {
+    // line-height: 45px;
+
+    .menu-item {
+      padding: 0 15px;
+      cursor: pointer;
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
+}
+.menu-item-active {
+}

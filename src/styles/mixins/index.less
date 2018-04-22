@@ -1,0 +1,19 @@
+.text-shadow(@rad; @color) {
+  text-shadow: 0 0 @rad @color;
+}
+
+.card-title() {
+  color: @title-color;
+  position: relative;
+  top: -1px;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 20px 12px;
+  text-align: center;
+  margin-bottom: 50px;
+  border: 1px solid @border-dark-color;
+  border-radius: 0 0 4px 4px;
+  // border-top: none;
+
+  .text-shadow(30px; #ddd);
+}
