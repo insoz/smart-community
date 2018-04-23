@@ -31,8 +31,8 @@ export default () => {
         <MapContainer />
       </CardWrapper>
       <CardWrapper type="card" className={chartCls}>
-        <Panel />
-        <Panel />
+        <Panel type="column" />
+        <Panel type="pie" title="户籍人口占比" />
       </CardWrapper>
     </div>
   );
