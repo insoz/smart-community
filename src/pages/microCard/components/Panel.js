@@ -1,26 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ReactHighcharts from "react-highcharts";
-import highcharts3d from "highcharts/highcharts-3d";
 
 import * as Charts from "../../../components/charts";
-
-// import Highcharts3D from 'highcharts/highcharts-3d'
-
 import CardWrapper from "../../../components/layouts/CardWrapper";
-import styles from "../assg.less";
-
-highcharts3d(ReactHighcharts.Highcharts);
+import styles from "../microCard.less";
 
 const Panel = ({ title, dataSource, config, component }) => {
   const ChartCom = Charts[component];
 
   return (
     <div className={styles["panel"]}>
-      <CardWrapper type="border" className="card-title">
+      {/* <CardWrapper type="border" className="card-title">
         {title}
-      </CardWrapper>
-      {Charts[component] ? <ChartCom /> : null}
+      </CardWrapper> */}
+      {Charts[component] ? <ChartCom /> : "没有此类型组件"}
     </div>
   );
 };

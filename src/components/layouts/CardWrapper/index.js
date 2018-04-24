@@ -19,7 +19,7 @@ function CardWrapper({ className, children, type }) {
     </div>
   );
 }
-CardWrapper.PropTypes = {
+CardWrapper.propTypes = {
   type: PropTypes.string
 };
 

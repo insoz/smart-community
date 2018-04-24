@@ -1,0 +1,59 @@
+html,
+body,
+:global(#root) {
+  height: 100%;
+  background: #090b1b;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+}
+
+.container-left {
+  width: 14%;
+  min-width: 14%;
+}
+
+.container-right {
+  width: 17%;
+  min-width: 17%;
+}
+
+.container-center {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.container-checkbox {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10px;
+
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  background-image: radial-gradient(
+    40% 67% at bottom,
+    rgba(0, 100, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+
+  :global {
+    .ant-checkbox-wrapper {
+      color: #fff;
+    }
+    .ant-checkbox-inner {
+      background: none;
+      border: 2px solid #3781cc;
+    }
+    .ant-checkbox-checked {
+      background: #3781cc;
+      border-radius: 2px;
+    }
+  }
+}

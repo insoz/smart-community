@@ -1,0 +1,23 @@
+@import "../../../../styles/index.less";
+
+:global {
+  .nav {
+    color: @menu-dark-color;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 58px;
+    border-bottom: 1px solid @border-dark-color;
+    border-image: linear-gradient(to right, #101432, #56a2d0, #101432) 1;
+
+    .nav-item {
+      cursor: pointer;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .nav-item-active {
+      text-shadow: 0px 0px 50px @item-active-color;
+      color: @item-active-color;
+    }
+  }
+}

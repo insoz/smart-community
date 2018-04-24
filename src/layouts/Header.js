@@ -34,8 +34,8 @@ function Header({ location }) {
           <Menu.Item key="/assg">
             <Link to="/assg">一标六识</Link>
           </Menu.Item>
-          <Menu.Item key="/users">
-            <Link to="/users">微卡口</Link>
+          <Menu.Item key="/microCard">
+            <Link to="/microCard">微卡口</Link>
           </Menu.Item>
           <Menu.Item key="/404">
             <Link to="/404">设施设备</Link>

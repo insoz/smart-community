@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classNames from "classnames";
 
-import styles from "./dataNav.less";
+import "./dataNav.less";
 import DataItem from "./DataItem";
 
 export default class DataNav extends Component {

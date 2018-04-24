@@ -19,7 +19,7 @@ export default class ColumnChart extends Component {
         plotBorderWidth: null,
         plotShadow: false,
         // height: 200,
-        spacing: [100, 0, 40, 0]
+        spacing: [80, 0, 40, 0]
       },
       title: {
         floating: true,
