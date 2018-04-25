@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Map, Marker } from "react-amap";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 export default class MapContainer extends Component {
   static propTypes = {
@@ -29,6 +30,10 @@ export default class MapContainer extends Component {
   }
   render() {
     const { className } = this.props;
+
+    const cls = classNames("map-container", {
+      [className]: className ? true : false
+    });
     const mapProps = {
       amapkey: "0191d7ddd0192918a5453573930a9e68",
       mapStyle: "amap://styles/dfdfc5be37e559734a7a54e979dcaf85",
@@ -39,7 +44,7 @@ export default class MapContainer extends Component {
       center: [121.134539, 31.155071]
     };
     return (
-      <div className={className} style={{ width: "100%", height: "100%" }}>
+      <div className={cls}>
         <Map {...mapProps}>
           <Marker position={this.markerPosition} events={this.markerEvents} />
         </Map>

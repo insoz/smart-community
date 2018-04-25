@@ -4,13 +4,25 @@ import PropTypes from "prop-types";
 
 import styles from "./chartPanel.less";
 import CardWrapper from "../../layouts/CardWrapper";
+import * as Charts from "../../charts";
 
-function ChartPanel({ border = true, type, className, title, dataSource }) {
+function ChartPanel({
+  border = true,
+  config,
+  component,
+  className,
+  title,
+  dataSource
+}) {
   function renderContent() {
+    const ChartCom = Charts[component];
     return (
       <div className={styles["chart-panel-container"]}>
-        <div className={styles["title"]}>{title}</div>
-        chart
+        <div className="center">
+          <div className={styles["title"]}>{title}</div>
+        </div>
+
+        {Charts[component] ? <ChartCom config={config} /> : "没有此类型组件"}
       </div>
     );
   }

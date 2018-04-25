@@ -6,8 +6,8 @@ import styles from "./cardWrapper.less";
 
 function CardWrapper({ className, children, type }) {
   const cls = classNames(className, {
-    [styles["card-wrapper"]]: type === "card" ? true : false,
-    [styles["border-wrapper"]]: type === "border" ? true : false
+    "card-wrapper": type === "card" ? true : false,
+    "border-wrapper": type === "border" ? true : false
   });
   return (
     <div className={cls}>

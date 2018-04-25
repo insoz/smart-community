@@ -1,83 +1,85 @@
 @import "../../../styles/index";
 @border-width: 2px;
 
-.card-wrapper {
-  text-align: center;
-  position: relative;
-  border-radius: 6px;
-  font-size: 18px;
-  border: 1px solid @border-color;
-  background: @darker-bg;
-  // border-image: linear-gradient(to right, #101432, #56a2d0, #101432) 1;
+:global {
+  .card-wrapper {
+    text-align: center;
+    position: relative;
+    border-radius: 6px;
+    font-size: 18px;
+    border: 1px solid @border-color;
+    background: @darker-bg;
+    // border-image: linear-gradient(to right, #101432, #56a2d0, #101432) 1;
 
-  > span {
-    position: absolute;
-    border: @border-width solid @border-dark-color;
-    width: 15px;
-    height: 13px;
+    > span {
+      position: absolute;
+      border: @border-width solid @border-dark-color;
+      width: 15px;
+      height: 13px;
+    }
+    :global {
+      .top {
+        top: -@border-width;
+        left: -@border-width;
+        border-top-left-radius: 6px;
+        border-right: none;
+        border-bottom: none;
+      }
+      .right {
+        top: -@border-width;
+        right: -@border-width;
+        border-top-right-radius: 6px;
+        border-left: none;
+        border-bottom: none;
+      }
+      .bottom {
+        bottom: -@border-width;
+        right: -@border-width;
+        border-bottom-right-radius: 6px;
+        border-left: none;
+        border-top: none;
+      }
+      .left {
+        bottom: -@border-width;
+        left: -@border-width;
+        border-bottom-left-radius: 6px;
+        border-right: none;
+        border-top: none;
+      }
+    }
   }
-  :global {
-    .top {
-      top: -@border-width;
-      left: -@border-width;
-      border-top-left-radius: 6px;
-      border-right: none;
-      border-bottom: none;
-    }
-    .right {
-      top: -@border-width;
-      right: -@border-width;
-      border-top-right-radius: 6px;
-      border-left: none;
-      border-bottom: none;
-    }
-    .bottom {
-      bottom: -@border-width;
-      right: -@border-width;
-      border-bottom-right-radius: 6px;
-      border-left: none;
-      border-top: none;
-    }
-    .left {
-      bottom: -@border-width;
-      left: -@border-width;
-      border-bottom-left-radius: 6px;
-      border-right: none;
-      border-top: none;
-    }
-  }
-}
 
-.border-wrapper {
-  text-align: center;
-  position: relative;
-  font-size: 18px;
-  border: 1px solid #000;
-  background: @dark-bg;
-  border-image: linear-gradient(to right, #101432, #56a2d0, #101432) 1;
+  .border-wrapper {
+    text-align: center;
+    position: relative;
+    font-size: 18px;
+    border: 1px solid #000;
+    background: @dark-bg;
+    border-image: linear-gradient(to right, #101432, #56a2d0, #101432) 1;
 
-  span {
-    position: absolute;
-    width: 6px;
-    height: 1px;
-    background: #0483d0;
-  }
-  :global {
-    .top {
-      top: 0;
-      left: 0;
+    span {
+      position: absolute;
+      width: 6px;
+      height: 1px;
+      background: #0483d0;
     }
-    .right {
-      top: 0;
-      right: 0;
-    }
-    .bottom {
-      bottom: 0;
-      right: 0;
-    }
-    .left {
-      bottom: 0;
-      left: 0;
+    :global {
+      .top {
+        top: 0;
+        left: 0;
+      }
+      .right {
+        top: 0;
+        right: 0;
+      }
+      .bottom {
+        bottom: 0;
+        right: 0;
+      }
+      .left {
+        bottom: 0;
+        left: 0;
+      }
     }
   }
 }

@@ -40,8 +40,8 @@ function Header({ location }) {
           <Menu.Item key="/404">
             <Link to="/404">设施设备</Link>
           </Menu.Item>
-          <Menu.Item key="/002">
-            <Link to="/404">综合数据</Link>
+          <Menu.Item key="/display">
+            <Link to="/display">综合数据</Link>
           </Menu.Item>
         </Menu>
       </div>

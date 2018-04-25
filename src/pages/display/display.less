@@ -1,0 +1,45 @@
+.container-left {
+  width: 27%;
+  min-width: 27%;
+
+  :global {
+    .card-wrapper {
+      margin-bottom: 15px;
+    }
+  }
+}
+.container-center {
+  flex: 1;
+  margin: 0 15px;
+  position: relative;
+}
+
+.map:global(.map-container) {
+  height: 409px;
+}
+.center-top {
+  display: flex;
+  margin-bottom: 15px;
+  margin-right: -15px;
+  :global {
+    .card-wrapper {
+      margin-right: 15px;
+      flex: 1;
+    }
+  }
+}
+
+.center-center {
+  margin-bottom: 15px;
+}
+
+.container-right {
+  width: 21%;
+  min-width: 21%;
+
+  :global {
+    .card-wrapper {
+      margin-bottom: 15px;
+    }
+  }
+}

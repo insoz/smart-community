@@ -44,8 +44,8 @@ export default ({ pathname }) => {
       <CardWrapper type="card" className={leftCls}>
         <Nav onChange={handleNavChange} />
         <div>地址:华浦路145号</div>
-        <Panel component={"ColumnChart"} />
         <Panel component={"PieChart"} />
+        <Panel component={"LineChart"} />
       </CardWrapper>
       <CardWrapper type="card" className={"container-center"}>
         <div className={"container-checkbox"}>
