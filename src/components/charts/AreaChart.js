@@ -26,32 +26,37 @@ export default class LineChart extends Component {
 }
 
 LineChart.defaultProps = {
-  /**各类设备报警统计*/
+  /** 面积图  各类设备报警统计*/
   chart: {
-    width: 260,
-    height: 300,
+    // width: 260,
+    height: 200,
     type: "areaspline",
     className: "chart-container",
     backgroundColor: "transparent",
     plotBackgroundColor: null,
     plotBorderWidth: null,
-    plotShadow: false
-    // height: 200,
+    plotShadow: false,
+    spacing: [10, 50, 40, 50]
   },
   title: {
     text: null
   },
   xAxis: {
+    allowDecimals: false,
     tickColor: "none",
     lineColor: "none",
-    tickInterval: 4,
-    categories: ["9:00", "9:30", "10:00"]
+    labels: {
+      formatter: function() {
+        return this.value;
+      }
+    }
   },
   yAxis: {
     gridLineColor: "#08264c",
     title: {
       text: null
-    }
+    },
+    opposite:true
   },
   tooltip: {
     shared: true,
@@ -65,42 +70,32 @@ LineChart.defaultProps = {
   },
   plotOptions: {
     areaspline: {
-      lineColor: {
-        linearGradient: [0, 0, 0, 300],
-        stops: [
-          [0, "#CB4E34"],
-          [
-            1,
-            Highcharts.Color("#F09450")
-              .setOpacity(0)
-              .get("rgba")
-          ]
-        ]
-      },
-      fillOpacity: 0.5,
-      fillColor: {
-        linearGradient: [0, 0, 0, 300],
-        stops: [
-          [0, "#CB4E34"],
-          [
-            1,
-            Highcharts.Color("#F09450")
-              .setOpacity(0)
-              .get("rgba")
-          ]
-        ]
-      },
-      series: {
-        /* className: 'main-color', */
-        negativeFillColor: true
+      pointStart: 1940,
+      marker: {
+        enabled: false,
+        symbol: "circle",
+        radius: 2,
+        states: {
+          hover: {
+            enabled: true
+          }
+        }
       }
     }
   },
   series: [
     {
-      name: "名称",
+      name: "AAA",
       data: [13, 64, 23, 55, 74, 54, 28],
-      color: '#fff'
+      color: "#54A5DD"
+    }, {
+        name: 'BBB',
+        data: [51, 23, 74, 53, 37, 25, 84],
+        color: "#F09450"
+    }, {
+        name: 'CCC',
+        data: [41, 29, 45, 37, 53, 35, 44],
+        color: "#34C780"
     }
   ]
 };

@@ -30,14 +30,14 @@ export default ({ pathname }) => {
   return (
     <div className="container">
       <div type="card" className={leftCls}>
-        <ChartPanel title="小区进出流量统计" component={"PieChart"} />
-        <ChartPanel title="各年龄段人员分布统计" component={"LineChart"} />
+        <ChartPanel title="小区进出流量统计" component={"AreaChart"} />
+        <ChartPanel title="各楼栋住户数量统计" component={"ColumnChart"} />
         <ChartPanel title="各年龄段人员分布统计" component={"LineChart"} />
       </div>
       <div type="card" className={centerCls}>
         <div className={styles["center-top"]}>
-          <ChartPanel title="各年龄段人员分布统计" component={"LineChart"} />
-          <ChartPanel title="各年龄段人员分布统计" component={"LineChart"} />
+          <ChartPanel title="各年龄段人员分布统计" component={"ActivityChart"} />
+          <ChartPanel title="安防设备数量统计" component={"RadarChart"} />
         </div>
         <CardWrapper type="card" className={styles["center-center"]}>
           <div className={"container-checkbox"}>
@@ -50,8 +50,8 @@ export default ({ pathname }) => {
         </CardWrapper>
       </div>
       <div type="card" className={rightCls}>
-        <ChartPanel title="各年龄段人员分布统计" component={"LineChart"} />
-        <ChartPanel title="各年龄段人员分布统计" component={"LineChart"} />
+        <ChartPanel title="各年龄段人员分布统计" component={"RingChart"} />
+        <ChartPanel title="小区进出流量统计" component={"PieChart"} />
       </div>
     </div>
   );

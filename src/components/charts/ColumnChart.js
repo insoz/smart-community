@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactHighcharts from "react-highcharts";
+import Highcharts from "highcharts";
+import Highcharts3D from "highcharts/highcharts-3d";
+
+Highcharts3D(Highcharts);
 
 /**
  * 柱状图
@@ -33,14 +37,15 @@ ColumnChart.defaultProps = {
     // className: "chart-container",
     // renderTo: "container",
     type: "column",
-    height: 200
-    // options3d: {
-    //   enabled: false,
-    //   alpha: 10,
-    //   beta: 0,
-    //   // depth: 50,
-    //   viewDistance: 25
-    // }
+    width: 260,
+    height: 200,
+    options3d: {
+      enabled: true,
+      alpha: 0,
+      beta: 0,
+      depth: 20,
+      viewDistance: 25
+    }
   },
   title: {
     text: null,
