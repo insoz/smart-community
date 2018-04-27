@@ -71,42 +71,42 @@ RingChart.defaultProps = {
       name: "countries",
       data: [
         {
-          name: "西班牙",
+          name: "10中介",
           y: 355370,
           z: 192.9,
           color:"#FF565D",
           selected: true
         },
         {
-          name: "法国",
+          name: "20饭店",
           y: 401500,
           z: 218.7,
           color:"#FF8D00",
           selected: true
         },
         {
-          name: "波兰",
+          name: "10网吧",
           y: 72685,
           z: 24.6,
           color:"#EBEC00",
           selected: true
         },
         {
-          name: "捷克共和国",
+          name: "18药店",
           y: 98867,
           z: 57.5,
           color:"#00A9FF",
           selected: true
         },
         {
-          name: "意大利",
+          name: "18超市",
           y: 151340,
           z: 81.8,
           color:"#00E170",
           selected: true
         },
         {
-          name: "瑞士",
+          name: "24药店",
           y: 281277,
           z: 154.5,
           color: "#926BFF",

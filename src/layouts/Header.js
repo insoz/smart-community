@@ -37,8 +37,8 @@ function Header({ location }) {
           <Menu.Item key="/microCard">
             <Link to="/microCard">微卡口</Link>
           </Menu.Item>
-          <Menu.Item key="/404">
-            <Link to="/404">设施设备</Link>
+          <Menu.Item key="/equipment">
+            <Link to="/equipment">设施设备</Link>
           </Menu.Item>
           <Menu.Item key="/display">
             <Link to="/display">综合数据</Link>

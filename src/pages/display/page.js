@@ -6,9 +6,12 @@ import CardWrapper from "../../components/layouts/CardWrapper";
 import CheckboxGroup from "../../components/checkbox/CheckboxGroup";
 import { ColumnChart } from "../../components/charts";
 import ChartPanel from "../../components/panel/ChartPanel";
+import BasicTable from "../../components/table/BasicTable/index";
+import { dataSource, columns } from "./dataConfig";
 // import Nav from "./components/Nav/index";
 import styles from "./display.less";
 
+const ChartItem = ChartPanel.ChartItem;
 // const { ColumnChart } = Charts;
 
 const leftCls = classNames({
@@ -27,6 +30,7 @@ export default ({ pathname }) => {
   function handleNavChange(key, item) {
     console.log(item);
   }
+
   return (
     <div className="container">
       <div type="card" className={leftCls}>
@@ -36,7 +40,10 @@ export default ({ pathname }) => {
       </div>
       <div type="card" className={centerCls}>
         <div className={styles["center-top"]}>
-          <ChartPanel title="各年龄段人员分布统计" component={"ActivityChart"} />
+          <ChartPanel
+            title="各年龄段人员分布统计"
+            component={"ActivityChart"}
+          />
           <ChartPanel title="安防设备数量统计" component={"RadarChart"} />
         </div>
         <CardWrapper type="card" className={styles["center-center"]}>
@@ -46,11 +53,14 @@ export default ({ pathname }) => {
           <MapContainer className={styles["map"]} />
         </CardWrapper>
         <CardWrapper type="card" className="center-bottom">
-          lll
+          <BasicTable dataSource={dataSource} columns={columns} />
         </CardWrapper>
       </div>
       <div type="card" className={rightCls}>
-        <ChartPanel title="各年龄段人员分布统计" component={"RingChart"} />
+        <ChartPanel title="各年龄段人员分布统计">
+          <ChartItem component={"RingChart"} />
+          <ChartItem component={"ColumnChart"} />
+        </ChartPanel>
         <ChartPanel title="小区进出流量统计" component={"PieChart"} />
       </div>
     </div>
