@@ -36,7 +36,7 @@ export const dataSource = [
     warning: "无"
   },
   {
-    key: "4",
+    key: "5",
     building: "3号楼",
     unit: "1单元",
     diviceName: "入口监控",
@@ -45,7 +45,7 @@ export const dataSource = [
     warning: "无"
   },
   {
-    key: "5",
+    key: "6",
     building: "4号楼",
     unit: "1单元",
     diviceName: "入口监控",

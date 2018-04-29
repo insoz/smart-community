@@ -43,7 +43,9 @@ export default ({ pathname }) => {
     <div className={"container"}>
       <CardWrapper type="card" className={leftCls}>
         <Nav onChange={handleNavChange} />
-        <div>地址:华浦路145号</div>
+        <div style={{ padding: "20px", fontSize: 14, textAlign: "left" }}>
+          地址:华浦路145号
+        </div>
         <Panel component={"PieChart"} />
         <Panel component={"LineChart"} />
       </CardWrapper>

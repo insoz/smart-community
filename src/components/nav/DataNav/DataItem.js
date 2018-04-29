@@ -5,19 +5,22 @@ import classNames from "classnames";
 // import styles from "./dataNav.less";
 import CardWrapper from "../../../components/layouts/CardWrapper";
 
-const DataItem = ({ label, className, value,img, onClick }) => {
+const DataItem = ({ label, className, value, icon, showIcon, onClick }) => {
   const cls = classNames(className, {
     // [styles["data-item"]]: true
   });
   return (
     <CardWrapper type="border" className={cls}>
-      <div onClick={onClick}>
-      
-        <div className="img">
-          <img src={img}  alt="" />
+      <div className="data-item" onClick={onClick}>
+        {showIcon && (
+          <div className="img">
+            <img src={icon} alt="" />
+          </div>
+        )}
+        <div>
+          <div className="label">{label}</div>
+          <div className="value">{value}</div>
         </div>
-        <div className="label">{label}</div>
-        <div className="value">{value}</div>
       </div>
     </CardWrapper>
   );

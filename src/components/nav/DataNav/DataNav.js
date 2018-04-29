@@ -28,7 +28,7 @@ export default class DataNav extends Component {
   };
 
   render() {
-    const { dataSource = [], className } = this.props;
+    const { dataSource = [], className, showIcon } = this.props;
     const { selectedKey } = this.state;
     const wrapperCls = classNames(className, {
       "nav-wrapper": true
@@ -46,10 +46,11 @@ export default class DataNav extends Component {
             return (
               <DataItem
                 className={cls}
+                showIcon={showIcon}
                 key={item.key}
                 label={item.label}
                 value={item.value}
-                img={item.img}
+                icon={item.icon}
                 onClick={() => this.handleClick({ item, key: item.key })}
               />
             );
@@ -61,43 +62,44 @@ export default class DataNav extends Component {
 }
 
 DataNav.defaultProps = {
+  showIcon: false,
   dataSource: [
     {
       key: "1",
       label: "实有人口数",
       value: 4850,
       // img:"https://umijs.org/img/rice.svg"
-      img: icon
+      icon: icon
     },
     {
       key: "2",
       label: "实有房屋数",
       value: 453,
-      img: "https://umijs.org/img/rice.svg"
+      icon: icon
     },
     {
       key: "3",
       label: "实有单位数",
       value: 468,
-      img: "https://umijs.org/img/rice.svg"
+      icon: icon
     },
     {
       key: "4",
       label: "实有安防设施数",
       value: 54,
-      img: "https://umijs.org/img/rice.svg"
+      icon: icon
     },
     {
       key: "5",
       label: "实有力量",
       value: 156,
-      img: "https://umijs.org/img/rice.svg"
+      icon: icon
     },
     {
       key: "6",
       label: "实有装备",
       value: 32,
-      img: "https://umijs.org/img/rice.svg"
+      icon: icon
     }
   ]
 };
