@@ -1,0 +1,147 @@
+@import "../../../../styles/index";
+
+.main-nav {
+  display: inline-flex;
+  .main-nav-item {
+    cursor: pointer;
+    padding: 20px 30px;
+    line-height: 18px;
+    font-size: 18px;
+    border-left: 1px solid @border-dark-color;
+    border-bottom: 1px solid @border-dark-color;
+    border-radius: 0 0 4px 4px;
+    &:last-child {
+      border-right: 1px solid @border-dark-color;
+    }
+  }
+  .main-nav-item-active {
+    color: @nav-color;
+    .text-shadow(30px; @nav-color);
+  }
+}
+
+.detail-container {
+  padding: 0 20px;
+
+  .detail-main-nav {
+    margin-bottom: 30px;
+  }
+  :global {
+    .line {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.datail-content {
+  display: flex;
+  text-align: left;
+}
+
+.detail-title {
+  font-size: 18px;
+  color: @menu-dark-color;
+  margin-bottom: 40px;
+}
+
+.action {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+
+  > div {
+    margin-left: 40px;
+  }
+}
+
+.person-list {
+  margin-left: -15px;
+}
+
+.info {
+  background: @card-bg;
+  border-radius: 4px;
+  text-align: center;
+  width: 205px;
+  padding: 25px 20px 30px;
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 15px;
+
+  .info-avatar {
+    margin-bottom: 20px;
+    :global {
+      .ant-avatar {
+        border-radius: 50%;
+        line-height: 80px;
+        background: #634bfe;
+        font-size: 40px;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .info-name {
+    color: @font-color;
+  }
+
+  p {
+    line-height: 25px;
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+}
+
+.avatar {
+}
+
+.detail-right {
+  flex: 1;
+  margin-left: 40px;
+}
+.detail-room-nav {
+  width: 470px;
+  min-width: 470px;
+}
+
+.room-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .room-index {
+    margin-left: 40px;
+    border: 3px solid #336ac9;
+    border-radius: 50%;
+    line-height: 1.8;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    color: @nav-color;
+    .color-shadow(30px; @nav-color);
+  }
+
+  .room-nav-wrapper {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+  }
+
+  .room-nav-item {
+    color: @menu-dark-color;
+    cursor: pointer;
+    line-height: 50px;
+    flex: 1;
+  }
+
+  .room-nav-item-active {
+    .color-shadow(30px; @nav-color);
+    background-image: radial-gradient(
+      53% 35% at top,
+      rgba(0, 100, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+  }
+}

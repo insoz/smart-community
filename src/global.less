@@ -1,7 +1,19 @@
+@import "./styles/index";
+
 html,
 body,
 :global(#root) {
   height: 100%;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
 }
 
 .container {
@@ -64,5 +76,30 @@ body,
       background: #3781cc;
       border-radius: 2px;
     }
+  }
+}
+
+.line {
+  height: 1px;
+  position: relative;
+  margin: 0 5px;
+  background: @line-color;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 1px solid @line-color;
+    left: -5px;
+    top: -2px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 1px solid @line-color;
+    right: -5px;
+    top: -2px;
   }
 }

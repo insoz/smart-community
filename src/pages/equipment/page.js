@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import MapContainer from "./components/MapContainer";
+import MapContainer from "../../components/map/MapContainer";
 import DataNav from "../../components/nav/DataNav";
 import Panel from "./components/Panel";
 import CheckboxGroup from "./components/CheckboxGroup";

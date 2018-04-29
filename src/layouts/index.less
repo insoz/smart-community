@@ -17,6 +17,7 @@
 
 .content {
   flex: 1;
+  flex-direction: column;
   display: flex;
 }
 
@@ -26,11 +27,18 @@
 }
 
 .menu {
-  margin-left: 178px;
+  padding: 0 40px 0 178px;
   font-size: 18px;
   line-height: 77px;
+  display: flex;
+  justify-content: space-between;
 }
 
+.tip {
+  span {
+    margin-left: 15px;
+  }
+}
 .line-left {
   position: absolute;
   left: 50%;
