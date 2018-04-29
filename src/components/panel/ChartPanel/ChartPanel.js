@@ -9,16 +9,21 @@ import * as Charts from "../../charts";
 
 class ChartPanel extends Component {
   static ChartItem = ChartItem;
-  static propTypes = {};
+  static propTypes = {
+    config: PropTypes.object
+  };
 
   renderContent = () => {
     const { title, config, component, children } = this.props;
     const ChartCom = Charts[component];
     return (
       <div className={styles["chart-panel-container"]}>
-        <div className="center">
-          <div className={styles["title"]}>{title}</div>
-        </div>
+        {title && (
+          <div className="center">
+            <div className={styles["title"]}>{title}</div>
+          </div>
+        )}
+
         {children ? (
           children
         ) : Charts[component] ? (
@@ -47,7 +52,7 @@ class ChartPanel extends Component {
 
 ChartPanel.defaultProps = {
   border: true,
-  title: "年龄段分布",
+  // title: "年龄段分布",
   type: 1,
   dataSource: []
 };

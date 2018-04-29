@@ -9,7 +9,7 @@ const DataItem = ({ data }) => {
   return (
     <div className={styles["item"]}>
       <div className={styles["img"]}>
-        <img />
+        <img alt="" />
       </div>
       <div className={styles["content"]}>
         <p>时间：{time}</p>
@@ -21,6 +21,8 @@ const DataItem = ({ data }) => {
   );
 };
 
-DataItem.propTypes = {};
+DataItem.propTypes = {
+  time: PropTypes.string
+};
 
 export default DataItem;

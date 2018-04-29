@@ -36,7 +36,9 @@ RadarChart.defaultProps = {
   config: {
     chart: {
       polar: true,
+      width: 300,
       type: "area",
+      className: "chart-container",
       backgroundColor: "transparent",
       plotBackgroundColor: null,
       plotBorderWidth: null,

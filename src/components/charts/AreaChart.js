@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactHighcharts from "react-highcharts";
-import Highcharts from "highcharts";
+// import Highcharts from "highcharts";
 
 /**
  * 面积图
@@ -30,6 +30,7 @@ LineChart.defaultProps = {
   chart: {
     // width: 260,
     height: 200,
+    width: 400,
     type: "areaspline",
     className: "chart-container",
     backgroundColor: "transparent",
@@ -56,7 +57,7 @@ LineChart.defaultProps = {
     title: {
       text: null
     },
-    opposite:true
+    opposite: true
   },
   tooltip: {
     shared: true,
@@ -88,14 +89,16 @@ LineChart.defaultProps = {
       name: "AAA",
       data: [13, 64, 23, 55, 74, 54, 28],
       color: "#54A5DD"
-    }, {
-        name: 'BBB',
-        data: [51, 23, 74, 53, 37, 25, 84],
-        color: "#F09450"
-    }, {
-        name: 'CCC',
-        data: [41, 29, 45, 37, 53, 35, 44],
-        color: "#34C780"
+    },
+    {
+      name: "BBB",
+      data: [51, 23, 74, 53, 37, 25, 84],
+      color: "#F09450"
+    },
+    {
+      name: "CCC",
+      data: [41, 29, 45, 37, 53, 35, 44],
+      color: "#34C780"
     }
   ]
 };

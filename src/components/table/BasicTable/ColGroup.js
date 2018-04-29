@@ -14,4 +14,6 @@ export default function ColGroup({ columns }) {
   return <colgroup>{cols}</colgroup>;
 }
 
-ColGroup.propTypes = {};
+ColGroup.propTypes = {
+  dataIndex: PropTypes.string
+};

@@ -93,8 +93,8 @@ export default class ColumnChart extends Component {
 
   componentDidMount() {
     let chart = this.chart.getChart();
-    console.log("this.chart", chart);
-    console.log(chart.userOptions);
+    // console.log("this.chart", chart);
+    // console.log(chart.userOptions);
 
     chart.setTitle({
       text: chart.userOptions.series[0].data[0].name

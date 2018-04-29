@@ -39,6 +39,7 @@ ActivityChart.defaultProps = {
   chart: {
     polar: true,
     type: "solidgauge",
+    className: "chart-container",
     backgroundColor: "transparent",
     plotBackgroundColor: null,
     plotBorderWidth: null,

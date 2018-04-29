@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import ReactHighcharts from "react-highcharts";
 import Highcharts from "highcharts";
 import Highcharts3D from "highcharts/highcharts-3d";
+import _ from "lodash";
 
 Highcharts3D(Highcharts);
 
@@ -16,13 +17,16 @@ export default class ColumnChart extends Component {
 
   render() {
     const { config, ...restProps } = this.props;
-    const chartConfig = {
-      ...restProps,
-      ...config
-    };
+
+    let newConfig = _.cloneDeep({ ...restProps });
+
+    _.forEach(config, (value, key) => {
+      _.set(newConfig, key, value);
+    });
+
     return (
       <div className="container">
-        <ReactHighcharts config={chartConfig} />
+        <ReactHighcharts config={newConfig} />
       </div>
     );
   }
@@ -36,15 +40,16 @@ ColumnChart.defaultProps = {
     backgroundColor: "transparent",
     // className: "chart-container",
     // renderTo: "container",
+    className: "chart-container",
     type: "column",
-    width: 260,
+    width: 300,
     height: 200,
     options3d: {
       enabled: true,
       alpha: 0,
       beta: 0,
-      depth: 20,
-      viewDistance: 25
+      depth: 20
+      // viewDistance: 25
     }
   },
   title: {
@@ -58,6 +63,7 @@ ColumnChart.defaultProps = {
     lineColor: "rgba(17,46,85,1)",
     lineWidth: 1,
     gridLineColor: "transparent",
+    categories: ["1号楼", "2号楼", "3号楼", "4号楼", "5号楼", "6号楼", "7号楼"],
     title: {
       text: null
     }
@@ -66,7 +72,7 @@ ColumnChart.defaultProps = {
     lineColor: "rgba(17,46,85,1)",
     lineWidth: 1,
     // tickPixelInterval: 100,
-    tickAmount: 5,
+    // tickAmount: 5,
     // tickPositions: [0, 100, 200, 300, 400],
     gridLineColor: "transparent",
     title: {
@@ -87,7 +93,7 @@ ColumnChart.defaultProps = {
   series: [
     {
       name: "测试",
-      data: [29.9, 71.5, 106.4, 129.2, 390.0]
+      data: [26, 280, 28, 71.5, 106.4, 129.2, 390.0]
     }
   ]
 };

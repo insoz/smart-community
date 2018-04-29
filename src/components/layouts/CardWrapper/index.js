@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import styles from "./cardWrapper.less";
+import "./cardWrapper.less";
 
 function CardWrapper({ className, children, type }) {
   const cls = classNames(className, {

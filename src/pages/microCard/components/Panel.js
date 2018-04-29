@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import * as Charts from "../../../components/charts";
-import CardWrapper from "../../../components/layouts/CardWrapper";
+// import CardWrapper from "../../../components/layouts/CardWrapper";
 import styles from "../microCard.less";
 
 const Panel = ({ title, dataSource, config, component }) => {

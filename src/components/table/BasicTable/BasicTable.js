@@ -6,7 +6,7 @@ import "./table.less";
 
 export default class BasicTable extends Component {
   static propTypes = {
-    // prop: PropTypes
+    dataSource: PropTypes.array
   };
 
   renderThead = () => {
