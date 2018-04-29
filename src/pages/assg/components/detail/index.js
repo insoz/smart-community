@@ -51,13 +51,10 @@ export default class DetailContainer extends Component {
             className={styles["detail-main-nav"]}
             dataSource={unitDataSource}
           />
+          <div className={styles["house-title"]}>1号楼1单元1803室</div>
           <div className="line" />
           <div className={styles["datail-content"]}>
-            <div className={styles["detail-room-nav"]}>
-              {roomNavs}
-              {roomNavs}
-              {roomNavs}
-            </div>
+            <div className={styles["detail-room-nav"]}>{roomNavs}</div>
             <div className={styles["detail-right"]}>
               <div className={styles["detail-title"]}>水电信息</div>
               <div className={styles["action"]}>
@@ -68,6 +65,9 @@ export default class DetailContainer extends Component {
               </div>
               <div className={styles["detail-title"]}>住户信息</div>
               <div className={styles["person-list"]}>
+                <PersonInfo />
+                <PersonInfo />
+                <PersonInfo />
                 <PersonInfo />
                 <PersonInfo />
                 <PersonInfo />

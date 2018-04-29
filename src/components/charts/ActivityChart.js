@@ -6,6 +6,9 @@ import Highcharts from "highcharts";
 import HighchartMore from "highcharts/highcharts-more";
 import HighchartSolidGauge from "highcharts/modules/solid-gauge";
 import HighchartsData from "highcharts/modules/data";
+
+import styles from "./index.less";
+
 // 添加data.js
 HighchartsData(Highcharts);
 // 添加hsolid-gauge
@@ -28,8 +31,26 @@ export default class ActivityChart extends Component {
       ...config
     };
     return (
-      <div>
-        <ReactHighcharts config={chartConfig} />
+      <div className={styles["wrapper"]}>
+        <div className={styles["info"]}>
+          <div>
+            <p>小区总人口：2879人</p>
+            <p>车辆总数：385辆</p>
+            <p>车位总数：673个</p>
+            <p>单位数：73个</p>
+            <p>安防设备：89</p>
+          </div>
+          <ReactHighcharts config={chartConfig} />
+        </div>
+        <div className="line" />
+        <div className={styles["info"]}>
+          <p>
+            待办事项<span>8</span>件
+          </p>
+          <p>
+            已处理事件<span>12</span>件
+          </p>
+        </div>
       </div>
     );
   }
@@ -45,7 +66,7 @@ ActivityChart.defaultProps = {
     plotBorderWidth: null,
     plotShadow: false,
     height: 120,
-    width:120
+    width: 120
   },
   title: {
     text: null
@@ -59,19 +80,18 @@ ActivityChart.defaultProps = {
   tooltip: {
     borderWidth: 0,
     backgroundColor: "none",
-    followPointer:false,
+    followPointer: false,
     shadow: false,
     style: {
       fontSize: "38px",
-      color:"#fff",
-      fontFamily:'微软雅黑'
-
+      color: "#fff",
+      fontFamily: "微软雅黑"
     },
-    pointFormat:'{point.y:,.0f}<br/>',
+    pointFormat: "{point.y:,.0f}<br/>",
     positioner: function(labelWidth, labelHeight) {
       return {
         x: 60 - labelWidth / 2,
-        y: 60 - labelHeight / 2,
+        y: 60 - labelHeight / 2
       };
     }
   },
@@ -117,7 +137,7 @@ ActivityChart.defaultProps = {
           innerRadius: "100%",
           y: 60
         }
-      ],
+      ]
     }
   ]
 };

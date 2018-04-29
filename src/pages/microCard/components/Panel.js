@@ -13,7 +13,7 @@ const Panel = ({ title, dataSource, config, component }) => {
       {/* <CardWrapper type="border" className="card-title">
         {title}
       </CardWrapper> */}
-      {Charts[component] ? <ChartCom /> : "没有此类型组件"}
+      {Charts[component] ? <ChartCom config={config} /> : "没有此类型组件"}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactHighcharts from "react-highcharts";
+import _ from "lodash";
 
 /**
  * 环形图
@@ -113,14 +114,16 @@ export default class ColumnChart extends Component {
 
   render() {
     const { config, ...restProps } = this.props;
-    const chartConfig = {
-      ...restProps,
-      ...config
-    };
+    let newConfig = _.cloneDeep({ ...restProps });
+
+    _.forEach(config, (value, key) => {
+      _.set(newConfig, key, value);
+    });
+
     return (
       <div>
         <ReactHighcharts
-          config={chartConfig}
+          config={newConfig}
           callback={this.afterRender}
           ref={inst => (this.chart = inst)}
         />

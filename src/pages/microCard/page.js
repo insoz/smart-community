@@ -39,6 +39,56 @@ export default ({ pathname }) => {
   function handleNavChange(key, item) {
     console.log(item);
   }
+
+  const pieChartProps = {
+    config: {
+      series: [
+        {
+          type: "pie",
+          innerSize: "70%",
+          name: "流量走势",
+          data: [
+            {
+              name: "车流",
+              y: 13,
+              color: {
+                radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+                stops: [
+                  [0, "#336AC9"],
+                  [1, "#54A5DD"] // darken
+                ]
+              }, //"#4182D1"
+              selected: true
+            },
+            {
+              name: "人流",
+              y: 25,
+              color: {
+                radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+                stops: [
+                  [0, "#CB4E34"],
+                  [1, "#F09450"] // darken
+                ]
+              },
+              selected: true
+            },
+            {
+              name: "非机动车",
+              y: 25,
+              color: {
+                radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+                stops: [
+                  [0, "#2A9055"],
+                  [1, "#42E9C0"] // darken
+                ]
+              },
+              selected: true
+            }
+          ]
+        }
+      ]
+    }
+  };
   return (
     <div className={"container"}>
       <CardWrapper type="card" className={leftCls}>
@@ -46,7 +96,7 @@ export default ({ pathname }) => {
         <div style={{ padding: "20px", fontSize: 14, textAlign: "left" }}>
           地址:华浦路145号
         </div>
-        <Panel component={"PieChart"} />
+        <Panel component={"PieChart"} {...pieChartProps} />
         <Panel component={"LineChart"} />
       </CardWrapper>
       <CardWrapper type="card" className={"container-center"}>

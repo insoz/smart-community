@@ -45,7 +45,7 @@ export default ({ pathname }) => {
           component={"ColumnChart"}
           {...colunmChartProps}
         />
-        <ChartPanel title="各年龄段人员分布统计" component={"LineChart"} />
+        <ChartPanel title="各年龄段人员分布统计" component={"RingChart"} />
       </div>
       <div type="card" className={centerCls}>
         <div className={styles["center-top"]}>
@@ -71,7 +71,8 @@ export default ({ pathname }) => {
           <ChartItem
             component={"ColumnChart"}
             config={{
-              "chart.width": 400,
+              "chart.width": 350,
+              "chart.height": 225,
               "title.text": "各楼栋单位数",
               "title.style": { color: "#fff" }
             }}

@@ -37,16 +37,7 @@ export const dataSource = [
   },
   {
     key: "5",
-    building: "3号楼",
-    unit: "1单元",
-    diviceName: "入口监控",
-    location: "入口",
-    status: "正常",
-    warning: "无"
-  },
-  {
-    key: "6",
-    building: "4号楼",
+    building: "5号楼",
     unit: "1单元",
     diviceName: "入口监控",
     location: "入口",

@@ -40,15 +40,15 @@ export default class MapContainer extends Component {
     this.markersEvents = {
       created: allMarkers => {
         console.log("All Markers Instance Are Below");
-        console.log(allMarkers);
+        // console.log(allMarkers);
       },
       click: (MapsOption, marker) => {
-        console.log("MapsOptions:");
-        console.log(MapsOption);
-        console.log("marker:");
-        console.log(marker);
+        // console.log("MapsOptions:");
+        // console.log(MapsOption);
+        // console.log("marker:");
+        // console.log(marker);
 
-        router.push('/assg/detail')
+        router.push("/assg/detail");
       },
       dragend: (MapsOption, marker) => {
         /* ... */

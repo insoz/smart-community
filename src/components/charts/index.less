@@ -1,0 +1,27 @@
+@import "../../styles/index";
+
+.wrapper {
+  padding: 40px 20px 20px;
+
+  :global {
+    .line {
+      margin: 40px 0;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  p {
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0;
+
+    span {
+      color: @font-color;
+    }
+  }
+}

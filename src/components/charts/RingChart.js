@@ -39,7 +39,7 @@ RingChart.defaultProps = {
     plotBackgroundColor: null,
     plotBorderWidth: null,
     plotShadow: false,
-    height: 200
+    height: 250
   },
   title: {
     text: "各类单位占比",
@@ -69,7 +69,7 @@ RingChart.defaultProps = {
   series: [
     {
       minPointSize: 10,
-      innerSize: "25%",
+      innerSize: "35%",
       zMin: 0,
       name: "countries",
       data: [

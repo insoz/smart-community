@@ -8,7 +8,7 @@ import styles from "./index.less";
 
 export default class RoomNav extends Component {
   static defaultProps = {
-    selectedKey: "1",
+    selectedKey: "1-1",
     index: "18",
     dataSource: [
       {
