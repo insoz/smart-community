@@ -26,7 +26,7 @@ export default class MapContainer extends Component {
         console.log(markerInstance.getPosition());
       }
     };
-    this.markerPosition = { longitude: 120, latitude: 30 };
+    this.markerPosition = { longitude: 121.134539, latitude: 31.155071 };
   }
   render() {
     const { className } = this.props;

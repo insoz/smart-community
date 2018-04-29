@@ -32,7 +32,7 @@ function Header({ location }) {
           theme={"dark"}
         >
           <Menu.Item key="/assg">
-            <Link to="/assg">一标六识</Link>
+            <Link to="/assg">一标六实</Link>
           </Menu.Item>
           <Menu.Item key="/microCard">
             <Link to="/microCard">微卡口</Link>
