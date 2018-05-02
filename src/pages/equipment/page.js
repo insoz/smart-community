@@ -3,7 +3,7 @@ import classNames from "classnames";
 import MapContainer from "../../components/map/MapContainer";
 import DataNav from "../../components/nav/DataNav";
 import Panel from "./components/Panel";
-import CheckboxGroup from "./components/CheckboxGroup";
+import CheckboxGroup from "../../components/checkbox/CheckboxGroup";
 import CardWrapper from "../../components/layouts/CardWrapper";
 import styles from "./equipment.less";
 import icon_jk from "../../assets/icons/icon_sbss_jk.png";
@@ -60,6 +60,16 @@ export default () => {
       icon: icon_jdsb
     }
   ];
+
+  const options = [
+    "全选",
+    "高空抛物",
+    "违章设备",
+    "消防栓",
+    "窨井盖",
+    "烟感探头",
+    "机电设备"
+  ];
   return (
     <div className={styles["assg-container"]}>
       <CardWrapper type="card" className={navCls}>
@@ -67,7 +77,7 @@ export default () => {
       </CardWrapper>
       <CardWrapper type="card" className={styles["map-container"]}>
         <div className={styles["checkbox-container"]}>
-          <CheckboxGroup />
+          <CheckboxGroup options={options} />
         </div>
         <MapContainer />
       </CardWrapper>

@@ -71,10 +71,11 @@ export default class MapContainer extends Component {
     const mapProps = {
       amapkey: amap_key,
       mapStyle: amap_style,
-      features: ["road", "building"],
+      // features: ["road", "building"],
       events: this.amapEvents,
       resizeEnable: true,
       zoom: 19,
+      plugins: ["OverView", "ControlBar"],
       center: this.amapCenter
     };
     return (

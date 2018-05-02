@@ -1,12 +1,21 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import ColGroup from "./ColGroup";
 import "./table.less";
 
 export default class BasicTable extends Component {
   static propTypes = {
-    dataSource: PropTypes.array
+    dataSource: PropTypes.array,
+    columns: PropTypes.array,
+    className: PropTypes.string,
+    bordered: PropTypes.bool
+  };
+  static defaultProps = {
+    bordered: false,
+    columns: [],
+    dataSource: []
   };
 
   renderThead = () => {
@@ -40,10 +49,15 @@ export default class BasicTable extends Component {
   };
 
   render() {
-    const { columns } = this.props;
+    const { columns, bordered, className, style } = this.props;
+
+    const cls = classNames("smart-table", {
+      "smart-table-bordered": bordered ? true : false,
+      [className]: className ? true : false
+    });
 
     return (
-      <table className={"smart-table"}>
+      <table style={style} className={cls}>
         <ColGroup columns={columns} />
         <thead className="smart-table-thead">{this.renderThead()}</thead>
         <tbody className="smart-table-tbody">{this.renderTbody()}</tbody>

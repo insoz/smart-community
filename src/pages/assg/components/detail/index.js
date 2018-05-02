@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { DatePicker } from "antd";
 
 import CardWrapper from "../../../../components/layouts/CardWrapper";
+import BasicTable from "../../../../components/table/BasicTable";
 import MainNav from "./MainNav";
 import RoomNav from "./RoomNav";
 import PersonInfo from "./PersonInfo";
@@ -44,6 +45,46 @@ export default class DetailContainer extends Component {
         />
       );
     });
+
+    const tableDataSource = [
+      {
+        id: 1,
+        carOwner: "王将军",
+        licencePlate: "沪A 8665",
+        brand: "奥迪",
+        model: "Q7"
+      },
+      {
+        id: 2,
+        carOwner: "张律师",
+        licencePlate: "沪A 8365X",
+        brand: "宝马",
+        model: "X6"
+      }
+    ];
+
+    const columns = [
+      {
+        dataIndex: "carOwner",
+        title: "车主",
+        width: 150
+      },
+      {
+        dataIndex: "licencePlate",
+        title: "车牌",
+        width: 150
+      },
+      {
+        dataIndex: "brand",
+        title: "品牌",
+        width: 150
+      },
+      {
+        dataIndex: "model",
+        title: "型号",
+        width: 150
+      }
+    ];
     return (
       <CardWrapper type="card">
         <div className={styles["detail-container"]}>
@@ -59,7 +100,7 @@ export default class DetailContainer extends Component {
               <div className={styles["detail-title"]}>水电信息</div>
               <div className={styles["action"]}>
                 <MonthPicker placeholder="请选择" />
-                <div>用水量：6吨</div>
+                {/* <div>用水量：6吨</div> */}
                 <div>用电量：102度</div>
                 <div>燃气用量：4立方</div>
               </div>
@@ -70,17 +111,14 @@ export default class DetailContainer extends Component {
                 <PersonInfo />
                 <PersonInfo />
                 <PersonInfo />
-                <PersonInfo />
-                <PersonInfo />
-                <PersonInfo />
-                <PersonInfo />
-                <PersonInfo />
-                <PersonInfo />
-                <PersonInfo />
-                <PersonInfo />
-                <PersonInfo />
-                <PersonInfo />
               </div>
+              <div className={styles["detail-title"]}>车辆信息</div>
+              <BasicTable
+                style={{ width: 590 }}
+                dataSource={tableDataSource}
+                columns={columns}
+                bordered
+              />
             </div>
           </div>
         </div>

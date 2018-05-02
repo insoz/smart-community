@@ -1,6 +1,17 @@
 :global {
   .smart-table {
-    min-width: 100%;
+    width: 100%;
+  }
+
+  .smart-table-bordered {
+    border: 1px solid #112e55;
+    .smart-table-thead {
+      & > tr {
+        & > th {
+          background: #272d53;
+        }
+      }
+    }
   }
 
   .smart-table-thead {
@@ -18,7 +29,7 @@
     & > tr {
       & > td {
         font-size: 14px;
-        padding: 10px;
+        padding: 10px 15px;
         word-break: break-all;
       }
     }

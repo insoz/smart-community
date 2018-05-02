@@ -22,7 +22,7 @@ export default class Nav extends Component {
       },
       {
         key: "3",
-        label: "西门"
+        label: "西北门"
       }
     ]
   };

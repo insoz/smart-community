@@ -20,6 +20,14 @@ const chartCls = classNames(styles["card-container"], {
 // });
 
 export default () => {
+  const options = [
+    "全部",
+    "实有房屋",
+    "实有单位",
+    "实有安防设施",
+    "实有力量",
+    "实有装备"
+  ];
   return (
     <div className={styles["assg-container"]}>
       <CardWrapper type="card" className={navCls}>
@@ -27,7 +35,7 @@ export default () => {
       </CardWrapper>
       <CardWrapper type="card" className={styles["map-container"]}>
         <div className={styles["checkbox-container"]}>
-          <CheckboxGroup />
+          <CheckboxGroup options={options} />
         </div>
         <MapContainer />
       </CardWrapper>
