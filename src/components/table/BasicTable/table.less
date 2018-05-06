@@ -1,6 +1,45 @@
+@import "../../../styles/index";
+
 :global {
   .smart-table {
     width: 100%;
+  }
+
+  .smart-table-container {
+    .pagination {
+      text-align: right;
+      padding: 12px 0;
+
+      .ant-pagination-item {
+        background: #202647;
+        border-color: @border-color;
+        a {
+          color: #285ea9;
+        }
+      }
+
+      .ant-pagination-item-active {
+        background: #0c5fb0;
+        a {
+          color: #fff;
+        }
+      }
+      .ant-pagination-prev,
+      .ant-pagination-next,
+      .ant-pagination-jump-prev,
+      .ant-pagination-jump-next {
+      }
+      .ant-pagination-prev .ant-pagination-item-link,
+      .ant-pagination-next .ant-pagination-item-link {
+        background: #202647;
+        border-color: @border-color;
+        color: #285ea9;
+      }
+      .ant-pagination-jump-prev:after,
+      .ant-pagination-jump-next:after {
+        color: #285ea9;
+      }
+    }
   }
 
   .smart-table-bordered {

@@ -11,7 +11,7 @@ import DataList from "./components/DataList";
 import styles from "./microCard.less";
 
 // const { ColumnChart } = Charts;
-
+ 
 const leftCls = classNames({
   "container-left": true
 });
